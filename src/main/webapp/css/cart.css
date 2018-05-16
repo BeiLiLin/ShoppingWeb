@@ -1,0 +1,133 @@
+body{
+	background:url("B1.jpg");
+}
+
+#contain{
+	width:1100px; 
+	margin:60px auto;
+	
+}
+#head{
+padding-top:58px;
+width:1100px;
+margin:0px auto;
+height:117px;
+}
+#main{
+width: 1100px;
+margin:0px auto
+}
+#selectmenu{
+width: 1100px;
+margin:0px auto
+}
+#table{
+width: 1100;	
+}
+#footer{
+	width: 1100px;
+margin:0px auto
+	}
+#float-bar-wrapper{
+	
+	width: 1100px;
+    height: 50px;
+	background: #e5e5e5;
+	position:fixed;
+	margin: 0px auto ;
+	left: 0;
+	right: 0;
+	bottom:0px;
+	line-height:50px;
+}
+#select-all{
+	position:relative;
+    float: left;
+    width: 80px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 5px;
+     margin: 0px auto ;
+     	top: 4px;
+}
+#operation{
+	width: 200px;
+    float: left;
+    line-height: 50px;
+    height: 50px;
+    margin: 0px auto ;
+}
+
+#float-right{
+    float: right;
+    background: #e5e5e5;
+    margin: 0px auto ;
+    height:50px;
+    padding-right: 10px
+}
+.barspan{
+	margin: 0px auto;
+	padding: 2px;
+	margin: 0px auto ;
+}
+input.checkbox{
+	outline: none;
+}
+a{
+	cursor:pointer;
+}
+ul{
+	list-style:none;
+	list-style-type: none;
+    list-style-position: initial;
+    list-style-image: initial;
+}
+.wrap-line{	
+    background: #e6e6e6;
+    height: 2px;
+    position: relative;
+    clear: both;
+}
+.floater{
+	background: #f40;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+.swicth-cart{
+	overflow: hidden;
+    height: 33px;
+}
+.btn-swicth-cart a{
+	padding-left: 25px;
+    text-decoration: none;
+     color: #3c3c3c;
+}
+.btn-swicth-cart{
+	float: left;
+    font-weight: 700;
+    font-size: 16px;
+    height: 16px;
+    line-height: 1.1;
+    font-family: 'Hiragino Sans GB','Lantinghei SC','Microsoft Yahei',SimSun;
+    text-align: center;
+    padding: 0 0 15px 0;
+    cursor: pointer;
+    margin-left: -1px;
+}
+.swicth-cart-0{
+	width:131px;
+	height:31px;
+	
+}
+.swicth-cart-0 a{
+	
+    padding-left: 15px;
+}
+.swicth-cart-1{
+	width:131px;
+	height:31px;
+}

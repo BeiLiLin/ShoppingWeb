@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+<!--加载数据库配置文件-->
+   <context:property-placeholder location="classpath:db.properties"/>
+    <!--使用annotation零配置-->
+    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="dao"/>
+    <context:component-scan base-package="action"/>
+    <context:component-scan base-package="domain"/>
+    <context:component-scan base-package="shop"/>
+    <!-- data connection setting -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <!--数据库连接配置-->
+        <property name="driverClass" value="${database.driverClassName}"/>
+        <property name="jdbcUrl" value="${database.url}"/>
+        <property name="user" value="${database.username}"/>
+        <property name="password" value="${database.password}"/>
+
+        <!-- 设置数据库连接池的最大连接数 -->
+        <property name="maxPoolSize" value="50"/>
+        <!-- 设置数据库连接池的最小连接数 -->
+        <property name="minPoolSize" value="5"/>
+        <!-- 设置数据库连接池的初始化连接数 -->
+        <property name="initialPoolSize" value="5"/>
+
+        <!-- 设置数据库连接池的连接最大空闲时间 -->
+        <property name="maxIdleTime" value="20"/>
+
+        <!-- c3p0缓存Statement的数量数 -->
+        <property name="maxStatements" value="50"/>
+
+        <!-- 当连接池里面的连接用完的时候,C3P0一下获取新的连接数 -->
+        <property name="acquireIncrement" value="20"/>
+
+     </bean>
+    <!-- hibernate 管理-->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+
+        <property name="hibernateProperties">
+            <props>
+                <prop key="show_sql">true</prop>
+                <prop key="dialect">org.hibernate.dialect.MySQLDialect</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.format_sql">true</prop>
+                <prop key="hibernate.show_sql">true</prop>
+                <!-- 解决session关闭问题 -->
+                <!--<prop key="hibernate.enable_lazy_load_no_trans">true</prop>-->
+                <!--<prop key="current_session_context_class">thread</prop>-->
+                <!--<prop key="hibernate.connection.url">-->
+                    <!--<![CDATA[jdbc:mysql://localhost:3306/demo1?useUnicode=true&characterEncoding=utf-8]]></prop>-->
+                <!--<prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>-->
+            </props>
+        </property>
+        <property name="packagesToScan">
+            <list>
+                <value>domain</value>
+            </list>
+        </property>
+    </bean>
+        <!-- 用注解来实现事物管理 -->
+        <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+            <property name="sessionFactory" ref="sessionFactory" />
+        </bean>
+        <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
+
+</beans>

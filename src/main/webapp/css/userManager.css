@@ -1,0 +1,145 @@
+@charset "UTF-8";
+		body{
+			    font-family: 'Open Sans', sans-serif;
+   			    font-size: 14px;
+   			    background:aliceblue;
+		}
+		.navbar-fixed-top{
+				position:inherit;
+		}
+		a:hover{
+				cursor:pointer;
+				text-decoration:none;
+		}
+		
+		/* #sidebar start */
+		#sidebar{
+				display:block;
+				width:220px;
+				position:relative;
+				z-index:20;
+				float:left;
+				top:-20px;
+		}
+		#sidebar > ul{
+				list-style:none;
+				position:absolute;
+				padding:0;
+				width:220px;
+		}
+		#sidebar > ul >li{
+				
+				position:relative;
+				height:42px;
+				line-height:20px;
+				display: list-item;
+  			    text-align: -webkit-match-parent;
+  			    border-bottom: 1px solid #b0b8bf;
+   			
+   				background-color: #f0f8ff;
+		}
+		#sidebar > ul >li:hover{
+			background-color: rgba(39,169,227,0.65);	
+		}
+		#sidebar > ul >li a{
+				display: block;
+				padding:10px 0 10px 15px;
+				color: #865454;
+				text-decoration:none;
+				width:100%;
+		}
+		#sidebar > ul > li.active > a {
+				background: url("../img/menu-active.png") no-repeat scroll right center transparent !important;
+				text-decoration:none;
+				
+		}
+		#sidebar > ul >li.active{
+				background-color: #a6e2d1;
+			  
+			    border-bottom: 1px solid #b0b8bf;
+		}
+		/* content */
+		#content {
+				background: none repeat scroll 0 0 #eeeeee;
+				margin-left: 220px;
+				margin-right: 0;
+				padding-bottom: 25px;
+				position: relative;
+				min-height:100%;
+				width: auto;
+				top: -19px;
+		}
+		#content-header{
+				height:41px;
+				width: auto;
+				line-height:30px;
+				padding:5px 0 10px 15px;
+		}
+		
+		#searchMenu{
+		top:31px;
+		height:125px;	
+		overflow-y:scroll;
+		width:187px;
+		}
+		#searchMenu  li{
+				width:168px;
+				height:28px;
+				padding:2px 0 2px 10px;
+			
+				
+		}
+	/* sreach */
+	#searchMenu  li:hover{
+		background-color:#eee;
+}
+		.panel-info {
+		    border-color: #eeeeee;
+		}
+		.panel{
+				background:#eee;
+		}
+		.col-lg-12,.col-md-12{
+			   padding-right: 0px; 
+    		   padding-left: 0px; 
+		}
+		
+		#panel-footer button{
+			float:right;
+			margin-right: 2px;
+	}
+	.select{
+				text-align:left;
+	}
+	.select div{
+			
+			float:right;
+	}
+
+		.operation{
+					text-align:center;
+		}
+		.control-label{
+			line-height: 34px;
+		}
+		.form-inline{
+			margin: 5px auto 10px;
+				
+		}
+
+		.form-inline label{
+			text-align: right;
+			
+		}
+		.form-inline .long-input{
+			width: 50%;
+			line-height: 34px;
+		}
+		.form-inline .radio{
+			margin-top: 5px;
+			padding-left:20px ;
+		} 
+		.glyphicon {
+			font-size: 14px;
+			
+		}

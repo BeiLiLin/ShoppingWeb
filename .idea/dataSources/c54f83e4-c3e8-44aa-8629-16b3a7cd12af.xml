@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="db_shop@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.4">
+    <root id="1"/>
+    <schema id="2" parent="1" name="db_shop">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="da_test_150202102548"/>
+    <schema id="4" parent="1" name="demo"/>
+    <schema id="5" parent="1" name="demo1"/>
+    <schema id="6" parent="1" name="hibernate"/>
+    <schema id="7" parent="1" name="information_schema"/>
+    <schema id="8" parent="1" name="liuyan"/>
+    <schema id="9" parent="1" name="mydatabase"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="mysqltest"/>
+    <schema id="12" parent="1" name="new_schema"/>
+    <schema id="13" parent="1" name="performance_schema"/>
+    <schema id="14" parent="1" name="robot"/>
+    <schema id="15" parent="1" name="shopping"/>
+    <schema id="16" parent="1" name="student"/>
+    <schema id="17" parent="1" name="sys"/>
+    <schema id="18" parent="1" name="test_150202102548"/>
+    <schema id="19" parent="1" name="wechat"/>
+    <schema id="20" parent="1" name="graduate_db">
+      <Current>1</Current>
+    </schema>
+    <schema id="21" parent="1" name="demo_hibernate"/>
+    <schema id="22" parent="1" name="jeesitedemo"/>
+    <schema id="23" parent="1" name="sakila"/>
+    <schema id="24" parent="1" name="shoppingweb"/>
+    <schema id="25" parent="1" name="studentmanagement"/>
+    <table id="26" parent="2" name="cartitem"/>
+    <table id="27" parent="2" name="comment"/>
+    <table id="28" parent="2" name="commodity"/>
+    <table id="29" parent="2" name="student"/>
+    <table id="30" parent="2" name="user"/>
+    <view id="31" parent="2" name="user_view">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="32" parent="2" name="userinfo_view">
+      <Comment>VIEW</Comment>
+    </view>
+    <view id="33" parent="2" name="username_view">
+      <Comment>VIEW</Comment>
+    </view>
+    <column id="34" parent="26" name="oid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="35" parent="26" name="cid">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="36" parent="26" name="uid">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="37" parent="26" name="num">
+      <Position>4</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="38" parent="26" name="createtime">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="39" parent="26" name="statu">
+      <Position>6</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <column id="40" parent="26" name="cartItem_cid">
+      <Position>7</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="41" parent="26" name="commodity_cid">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <index id="42" parent="26" name="FK_Commodity">
+      <ColNames>cid</ColNames>
+    </index>
+    <index id="43" parent="26" name="UK_gv3qoh83f8axnwqb42vhn6opx">
+      <ColNames>commodity_cid</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="44" parent="26" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>oid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="45" parent="26" name="UK_gv3qoh83f8axnwqb42vhn6opx">
+      <ColNames>commodity_cid</ColNames>
+      <UnderlyingIndexName>UK_gv3qoh83f8axnwqb42vhn6opx</UnderlyingIndexName>
+    </key>
+    <column id="46" parent="27" name="cmtid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="27" name="uid">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="48" parent="27" name="cid">
+      <Position>3</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="27" name="message">
+      <Position>4</Position>
+      <DataType>text|0</DataType>
+    </column>
+    <column id="50" parent="27" name="com_time">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+    </column>
+    <column id="51" parent="27" name="evaluate">
+      <Position>6</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <key id="52" parent="27" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cmtid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="53" parent="28" name="cid">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="54" parent="28" name="cname">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="28" name="cost">
+      <Position>3</Position>
+      <DataType>decimal(10,2)|0</DataType>
+    </column>
+    <column id="56" parent="28" name="info">
+      <Position>4</Position>
+      <DataType>varchar(300)|0</DataType>
+    </column>
+    <column id="57" parent="28" name="classify">
+      <Position>5</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="58" parent="28" name="pic">
+      <Position>6</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="59" parent="28" name="merchant">
+      <Position>7</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="60" parent="28" name="store">
+      <Position>8</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="61" parent="28" name="commodity_cid">
+      <Position>9</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="62" parent="28" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>cid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="63" parent="29" name="Sid">
+      <Position>1</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="64" parent="29" name="SName">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="65" parent="29" name="address">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="66" parent="29" name="sex">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="67" parent="29" name="tele">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <key id="68" parent="29" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Sid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="69" parent="30" name="uid">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="70" parent="30" name="rank">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="71" parent="30" name="uname">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="72" parent="30" name="password">
+      <Position>4</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="73" parent="30" name="address">
+      <Position>5</Position>
+      <DataType>varchar(70)|0</DataType>
+    </column>
+    <column id="74" parent="30" name="tele">
+      <Position>6</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <index id="75" parent="30" name="uname">
+      <ColNames>uname</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="30" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>uid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="77" parent="30" name="uname">
+      <ColNames>uname</ColNames>
+      <UnderlyingIndexName>uname</UnderlyingIndexName>
+    </key>
+    <column id="78" parent="31" name="uid">
+      <Position>1</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="79" parent="31" name="rank">
+      <Position>2</Position>
+      <DataType>int(11)|0</DataType>
+    </column>
+    <column id="80" parent="31" name="uname">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="81" parent="31" name="password">
+      <Position>4</Position>
+      <DataType>varchar(16)|0</DataType>
+    </column>
+    <column id="82" parent="31" name="address">
+      <Position>5</Position>
+      <DataType>varchar(70)|0</DataType>
+    </column>
+    <column id="83" parent="31" name="tele">
+      <Position>6</Position>
+      <DataType>varchar(11)|0</DataType>
+    </column>
+    <column id="84" parent="32" name="uname">
+      <Position>1</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="85" parent="32" name="uid">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="86" parent="33" name="uname">
+      <Position>1</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+  </database-model>
+</dataSource>

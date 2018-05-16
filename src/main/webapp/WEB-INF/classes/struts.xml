@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true"></constant>
+    <constant name="struts.devMode" value="true"></constant>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+
+    <package name="default" namespace="/" extends="struts-default"></package>
+    <!-- 用户管理的包 -->
+    <package name="user" namespace="/user" extends="json-default">
+        <action name="User_*" class="action.UserAction" method="{1}">
+            <result type="json">
+            </result>
+            <result name="update">/UserManagement/editInfo.jsp</result>
+            <result name="put" type="redirect">/UserManagement/index.jsp</result>
+        </action>
+        <action name="Regist_*" class="action.RegistAction" method="{1}">
+            <result name="regist" type="redirect">/UserManagement/index.jsp</result>
+            <result name="regist_error">/UserManagement/regist.jsp</result>
+
+        </action>
+    </package>
+    <!-- 商品管理的包 -->
+    <package name="Product" namespace="/product" extends="json-default">
+        <interceptors>
+            <interceptor name="Pleaselogin" class="interceptor.EnterCart">
+            </interceptor>
+        </interceptors>
+        <action name="Product_*" class="action.CartItemAction" method="{1}">
+            <result name="cart">/ProductManagement/cart.jsp</result>
+            <result name="plogin">/UserManagement/index.jsp</result>
+            <result type="json"></result>
+            <!-- 加入拦截器，只拦截cart方法 -->
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <interceptor-ref name="Pleaselogin">
+                <param name="includeMethods">cart</param>
+            </interceptor-ref>
+        </action>
+        <!-- 方 -->
+        <action name="Commodity_*" class="action.CommodityAction"
+                method="{1}">
+            <result name="commodity">/ProductManagement/Commodity.jsp
+            </result>
+            <result name="addCommodity">/ProductManagement/chargecd.jsp</result>
+            <result name="edit">/ProductManagement/editcd.jsp</result>
+        </action>
+        <action name="Comment_*" class="action.CommentAction" method="{1}">
+            <result name="getcomment"  >/ProductManagement/commodityview.jsp</result>
+            <result name="addcomment" type="redirect">/ProductManagement/commodityview.jsp</result>
+        </action>
+    </package>
+    <!-- 超链接管理的包 -->
+    <package name="Link" namespace="/link" extends="struts-default">
+        <action name="Link_*" class="action.LinkAction" method="{1}">
+            <result name="regist">/UserManagement/regist.jsp</result>
+        </action>
+    </package>
+    <!-- 异步处理的包 -->
+    <package name="ajax" extends="json-default">
+        <action name="ajax_*" class="action.JsonAction" method="{1}">
+            <result type="json">
+                <!-- 设置返回类型为json -->
+            </result>
+        </action>
+    </package>
+    <!-- Add packages here -->
+</struts>

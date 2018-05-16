@@ -1,0 +1,514 @@
+body {
+	clear: both;
+	margin: 0;
+	padding: 0;
+}
+
+#bo	div {
+	display: block;
+} /* 有的div设了hidden*/
+#bo a {
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+
+#bo li a {
+	padding: 0 0 0 8px;
+	line-height: 22px;
+	height: 22px;
+	display: block;
+}
+
+#bo a:hover {
+	color: red;
+}
+
+.head_operate {
+	width: 1200px;
+	margin: 0 auto;
+	background-color: #f9f9f9;
+	height: 34px;
+}
+
+.head_operate_ul {
+	float: right;
+	padding-top: 2px;
+}
+
+#bo ul {
+	font-size: 100%;
+	zoom: 1;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
+}
+
+#bo ul :after {
+	content: ".";
+	height: 0;
+	display: block;
+	clear: both;
+	visibility: hidden;
+}
+
+#bo li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
+	float: left;
+	height: 22px;
+	padding-top: 4px;
+	line-height: 21px;
+	position: relative;
+	z-index: 100;
+}
+
+.head_welcome {
+	padding: 5px 0 0 10px;
+	height: 24px;
+	line-height: 24px;
+	position: relative;
+	float: right;
+	z-index: 50;
+}
+
+.head_welcome a {
+	display: inline-block;
+	margin-right: 4px;
+}
+
+#bo a.login_link {
+	color: #ff2832 !important;
+}
+
+#s {
+	width: 48px;
+	height: 40px;
+	border: none;
+	background: url(./img/s_but.png) no-repeat;
+	cursor: pointer;
+	position: absolute;
+	left: 420px;
+	top: 0;
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	display: inline;
+	align-items: flex-start;
+}
+
+#bo form {
+	display: block;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
+	font: 12px 'Hiragino Sans GB', "simsun", "Arial";
+	color: #646464;
+}
+
+#key_S {
+	width: 398px;
+	height: 18px;
+	border: 2px solid #ff2832;
+	padding: 9px 0 9px 10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	/*z-index: 2;*/
+	color: #323232;
+	font: 12px/18px 'Hiragino Sans GB', "simsun", Arial;
+	outline: 0;
+	margin: 0 auto;
+	display: inline;
+	text-align: start;
+}
+
+#sd {
+	width: 500px;
+	margin: 30px auto;
+	position: relative;
+	display: inline-block;
+}
+
+.navi {
+	display: inline-block;
+	width: 150px;
+	font-size: 20px;
+}
+
+.side a {
+	text-decoration: none;
+	color: #000;
+}
+
+.n {
+	list-style: none;
+}
+
+.box {
+	width: 900px;
+	height: 500px;
+	margin: 0px auto;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+}
+/*.box_img{width: 1px;height: 250px;overflow: hidden;padding: 0;}*/
+.box_img ul li {
+	position: absolute;
+	display: none;
+	padding: 0;
+}
+
+.box_img ul li a {
+	display: block;
+	width: 346px;
+	height: 250px;
+	font-size: 100px;
+	text-align: center;
+	line-height: 250px;
+	color: #fff;
+}
+
+.box_tab {
+	position: absolute;
+	left: 267px;
+	text-align: center;
+	width: 346px;
+	bottom: 0;
+	z-index: 2000;
+}
+
+.box_tab a {
+	display: inline-block;
+	padding: 2px 10px;
+	font-size: 10px;
+	background: #fff;
+	margin: 0 5px;
+	color: #333;
+}
+
+.box_tab a.active {
+	background: #09b;
+	color: #fff;
+}
+
+.book {
+	width: 150px;
+	display: block;
+	height: 150px;
+}
+
+#product {
+	width: 680px;
+	padding-top: 25px;
+	margin: 0 auto;
+	padding: 0;
+	list-style-type: none;
+	border: 0;
+}
+
+.bname {
+	display: block;
+	padding: 60px 20px 0;
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	margin: 0;
+	list-style-type: none;
+	border: 0;
+	font-size: 100%;
+}
+
+.line {
+	width: 170px;
+	margin-right: 47px;
+	margin-bottom: 16px;
+	height: 250px;
+	position: relative;
+	overflow: visible;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 10px;
+	position: absolute;
+	bottom: 0;
+}
+
+#footer a {
+	color: #8c8c8c;
+	font-size: 12px;
+}
+
+#footer span {
+	margin: 0 30px;
+}
+
+.buy_box a {
+	width: 100px;
+	height: 28px;
+	line-height: 28px;
+	background: #ff2832;
+	border-radius: 3px;
+	display: inline-block;
+	zoom: 1;
+	color: #fff;
+	text-align: center;
+	font-family: 'Microsoft Yahei';
+	font-size: 14px;
+	margin-right: 10px;
+}
+
+#in {
+	display: inline;
+	height: 100px;
+	width: 500px;
+	margin-left: 500px;
+	margin-top: 10px;
+	padding-left: 0px;
+	margin: 10px -1% 0 -13%;
+}
+
+#bu {
+	height: 45px;
+	width: 100px;
+	margin: 40px 60px;
+	float: right;
+	display: inline-block;
+	position: absolute
+}
+
+#tbc {
+	width: 50%;
+	margin: 70px auto;
+	padding: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
+	display: block;
+	text-align: center;
+}
+
+#tbc .t {
+	width: 30%;
+	height: 50px;
+	margin: 0 auto;
+	padding: 16px 7px;
+	/* border-bottom: 1px solid #e3e3e3; */
+	display: table-cell;
+	vertical-align: inherit;
+}
+
+.mess {
+	width: 30%;
+	height: 40px;
+}
+
+<!--
+.time {--><!----><!--
+
+}
+
+-->
+<!--
+#tbc .tu {--><!----><!--
+
+}
+-->
+/*child strat*/
+#child{
+	width: 100%;
+	/*height: 560px;*/
+	height: 440px;
+
+	position: relative;
+}
+#child a{
+	cursor: pointer;
+
+}
+#child #childcontent{
+	width: 1200px;
+	height: auto;
+
+	margin: 10px auto;
+	text-align: center;
+	position: relative;
+}
+#child #childcontent #childpic{
+	box-shadow: 5px 5px 3px #9a8181;
+
+}
+#child #childcontent #tips{
+	position: absolute;
+	top: 74px;
+	left: 14px;
+	z-index: 100;
+}
+#child #childcontent #left{
+	margin-top: 35px;
+	width: 350px;
+	height: 400px;
+	/*border: 1px solid #9A8181;*/
+	/*position: absolute;
+    float: left;*/
+}
+#child #childcontent #left span{
+	text-align: left;
+	margin: 0 30px;
+}
+#child #childcontent #content{
+	position: relative;
+
+	width: 600px;
+	height: 400px;
+	top: -400px;
+	left: 360px;
+	/*border: 1px solid #0099BB;*/
+	text-align: left;
+	padding-left:10px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 20px;
+}
+#child #childcontent #content span{
+	font-family: "微软雅黑";
+	font-size: 16px;
+
+}
+#child #childcontent #content span a{
+	color: blue;
+}
+#child #childcontent #content #prise{
+	margin: 10px 0;
+	position: absolute;
+	border: 1px solid #EBEBEB;
+	width:598px;
+	height: 60px;
+	background: #EBEBEB;
+	border-radius: 4px 4px;
+}
+#child #childcontent #content #prise .prisetext{
+	text-align:justify;
+	position: absolute;
+	color: #FF0000;
+	bottom: 0px;
+	left: 10px;
+}
+#child #childcontent #content #prise .prisetext #saleprise{
+	color: #FF0000;
+	font-size: 28px;
+	font-family: "微软雅黑";
+}
+#child #childcontent #content #prise .prisetext #oldprise{
+	color: #969696;
+
+}
+#child #childcontent #content #prise .prisetext #oldprise #oldpriseText{
+	text-decoration:line-through;
+
+}
+#child #childcontent #content #prise span{
+	padding: 5px 5px;
+	font-size: 13px;
+
+}
+
+#child #childcontent #content #service{
+	position: absolute;
+	width: 580px;
+	height: 90px;
+	/*border: 1px solid #0099BB;*/
+	top: 200px;
+	left: 10px;
+	padding: 0px 10px;
+}
+#child #childcontent #content #service .serviceText{
+	color: #969696;
+	margin: 10px;
+	letter-spacing: 2px;
+
+}
+#child #childcontent #content #service #product .productText{
+	display:inline-block;
+	width: auto;
+	height: 28px;
+	border: 1px solid #ddd;
+	line-height: 28px;
+	text-align: center;
+	color: #0e4e63;
+}
+#child #childcontent #content #service #product .productText:hover{
+	border: 1px solid #8C8C8C;
+	cursor: pointer;
+	-webkit-transition: all 550ms ease-in-out;
+	-moz-transition: all 550ms ease-in-out;
+	-o-transition: all 550ms ease-in-out;
+	transition: all 550ms ease-in-out;
+}
+#child #childcontent #content #btn{
+	width: 280px;
+	height: 38px;
+
+	margin: 20px;
+	top:123px;
+	left: 130px;
+	position: absolute;
+}
+#child #childcontent #content #btn button{
+	width:90px;
+	height: 38px;
+	background-color: rgba(237, 40, 53, 0.58);
+	border:0px;
+	line-height: 28px;
+	font-size: 14px;
+	border-radius: 4px 4px;
+
+}
+#child #childcontent #content #btn button:hover{
+	background-color: #53ca97;
+
+	-webkit-transition: all 550ms ease-in-out;
+	-moz-transition: all 550ms ease-in-out;
+	-o-transition: all 550ms ease-in-out;
+	transition: all 550ms ease-in-out;
+	cursor: pointer;
+}
+
+#child #childcontent #content #btn #cart {
+	float: right;
+}
+#child #childcontent  #right{
+	top: 100px;
+	left: 987px;
+	position: absolute;
+	width: 160px;
+	height: 400px;
+}
+#child #childcontent  #right .shop{
+
+	line-height: 34px;
+	width: 76px;
+	height: 34px;
+	display: inline-block;
+	border: 1px solid #ddd;
+	border-radius: 3px 3px;
+	margin: 10px auto;
+}
+/*child end*/
+/*start pro_comment  */
+#pro_comment{
+	position:relative;
+
+}
+#user_com{
+	height:160px;
+	text-align: center;
+	width: 100%;
+}

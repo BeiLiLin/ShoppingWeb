@@ -1,0 +1,405 @@
+/* search 搜索框 */
+body{
+	background:url("B1.jpg");
+	
+}
+#search{
+	width:1280px;
+	margin:55px auto 5px;
+	height:60px;
+	/* //background:#eeeeee; */
+
+}
+
+#search-body{
+	position:relative;
+	height:100%;
+	width:454px;
+	/* background: #eee; */
+	padding-top: 8px;
+	margin:0 auto;
+}
+#search-tip{
+		float:left;
+	    
+	    border-radius: 22px 0px 0px 22px;
+	    height: 45px;
+	    text-align: center;
+	    line-height: 30px;
+}
+#search-body .input-group{
+		width:400px;
+	
+}
+#search-body .form-control{
+ 		height: 45px;
+ 		
+ 	    z-index: 0;
+ 	    border-radius: 22px 0px 0 22px;
+}
+#searchBtn{
+		height: 45px;
+		border-radius: 0px 22px 22px 0px;
+	    line-height: 30px;
+	    width:70px;
+}
+
+#content-box{
+	width:100%;
+	height: 400px;
+}
+
+
+.content {
+	position: relative;
+	
+	width:1280px;;
+	height: 400px;
+	
+	margin:0px auto 0;
+}
+/* left nav */
+#content-left {
+	width: 200px;
+	height: auto;
+}
+
+a {
+	cursor: pointer;
+}
+
+a:link {
+	
+}
+
+a:visited {
+	
+}
+
+a:hover {
+	
+}
+
+a:active {
+	
+}
+.glyphicon-chevron-right{
+		float: right;
+	    margin-right: 15px;
+	    line-height: 26px;
+	    font-size: 12px;
+}
+#content-left ul {
+		background: rgba(105, 110, 142, 0.07);
+	    height: 396px;
+}
+
+#content-left ul li {
+	position: relative;
+	cursor: pointer;
+	font-size: 15px;
+	list-style: none;
+	padding: 9px;
+	margin-left: 15px;
+	display: block;
+	height: 44px;
+    line-height: 30px;
+}
+
+#content-left ul li i {
+	right: 25px;
+	position: absolute;
+	float:left;
+}
+
+#content-left ul li:hover {
+	background: #f7f7f7;
+	color:#0092ee;
+}
+
+#content-left ul li span:hover {
+	
+}
+.content .right{
+		/*  background:green;*/
+			width:960px;
+			height:400px;
+		    position: absolute; 
+		    top: 0;
+		    left: 200px;
+}
+#myCarousel{
+			width:1065px;
+			height:396px;
+			
+}
+li.active {
+	background: #f7f7f7;
+}
+
+.none {
+	display: none;
+}
+
+#menu {
+	width: 600px;
+	position: absolute;
+	border: 1px solid #f7f7f7;
+	background: #f7f7f7;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
+	box-sizing: border-box;
+	top: 0px;
+	left: 200px;
+	margin: 0;
+	padding: 10px;
+	z-index: 9999;
+	height:396px;
+}
+
+li {
+	display: block;
+	position: relative;
+}
+
+.menu-list dl {
+	overflow: hidden;
+}
+
+.menu-list a {
+	color: #666;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+.menu-list dt {
+	float: left;
+	position: relative;
+	width: 70px;
+	font-weight: bold;
+	height: 21px;
+	line-height: 21px;
+	clear: left;
+}
+
+.menu-list dd {
+	float: left;
+	margin-left: 5px;
+	border-top: 1px solid #eee;
+	margin-bottom: 5px;
+}
+
+.menu-list dd a {
+	margin: 4px 0;
+	padding: 0 10px;
+	border-left: 1px solid #e0e0e0;
+}
+
+.menu-list dt i {
+	width: 4px;
+	height: 14px;
+	font: 400 9px/14px consolas;
+	/*粗细 font-size line-height: 字体*/
+	position: absolute;
+	right: 15px;
+	top: 4px;
+}
+
+.glyphicon-shopping-cart {
+	color: #ec4d72;
+}
+
+#login .modal-content {
+	width: 330px;
+	margin: 0 auto;
+}
+
+#login .modal-footer {
+	border-top: 0;
+	margin-top: 0px;
+	padding: 10px 20px 20px;
+}
+
+#login .modal-header {
+	border: 0 none;
+	padding: 15px 15px 15px;
+}
+
+#login-logo {
+	width: 100%;
+	height: 50px;
+	text-align: center;
+	float: none;
+	margin: 0 auto 30px;
+	line-height: 50px;
+}
+
+#login-logo a {
+	margin: 0 22px;
+	height: 50px;
+	width: 50px;
+	float: left;
+	color: #FFFFFF;
+	border-radius: 100px;
+	display: inline-block;
+}
+
+#github {
+	background: url("../img/github.jpg") no-repeat;
+}
+
+#github:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#weChat {
+	background: url("../img/weChat.jpg") no-repeat;
+}
+
+#weChat:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}
+
+#qq {
+	background: url("../img/qq.jpg") no-repeat;
+}
+
+#qq:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+/* 分割线 */
+#login-content .division {
+	float: none;
+	margin: 0 auto 18px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+#login-content .division .line {
+	border-top: 1px solid #DFDFDF;
+	position: absolute;
+	top: 10px;
+	width: 34%;
+}
+
+#login-content .division .line.l {
+	left: 0;
+}
+
+#login-content .division .line.r {
+	right: 0;
+}
+
+#login-content .division span {
+	color: #424242;
+	font-size: 17px;
+}
+
+#login-content .form-control {
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, 0.09);
+	box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+	color: #333333;
+	font-size: 16px;
+	height: 46px;
+	margin-bottom: 5px;
+	padding: 13px 12px;
+}
+
+#login-content .form-control:hover {
+	background-color: rgba(0, 0, 0, .10);
+}
+
+#login-content .form-control:focus {
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+	background-color: rgba(0, 0, 0, 0.23);
+}
+
+#login-content #loginBtn {
+	background-color: #00BBFF;
+	border-color: #00BBFF;
+	border-width: 0;
+	color: #FFFFFF;
+	display: block;
+	margin: 0 auto;
+	padding: 15px 50px;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.modal-footer {
+	color: #797979;
+	margin-left: 0;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+}
+
+#shop{
+		width:100%;
+		height:auto;
+}
+#shop-content{
+		margin:0 auto;
+		width:1280px;
+}
+#shop-content{
+		
+}
+.shop-product{
+		width:100%;
+		height:370px;
+		border:1px solid #eee;
+}
+.shop-header{
+	margin: 10px 0 10px 15px;
+    width: 100%;
+    height: 46px;
+    text-align: left;
+    line-height: 46px;
+    font-size: 20px;
+    color: #AD45Df;
+    
+}
+.shop-line{
+	font-weight: bold;
+    font-size: 20px;
+    margin-right: 8px;
+
+}
+
+ .animate-shadow-2{
+ 	position:relative;
+  box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+  -webkit-transition: box-shadow 1s ease;
+  -o-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+  font-family: -webkit-pictograph;
+}
+.animate-shadow-2:hover{
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22), 0 14px 56px rgba(0, 0, 0, 0.25);
+}
+.product-img{
+	height:260px;
+	width:100%;
+	background:#eee;
+	
+}
+.img-content{
+	height:40px;
+	width:98%;
+	background: rgba(36, 46, 53, 0.2);
+	bottom: 0;
+    position: absolute;
+    margin-bottom: 3px;
+    left: 1%;
+	font-size: 16px;
+    font-weight: bold;
+    line-height: 28px;
+    color: #1c2a54;
+}
+	
